@@ -10,10 +10,21 @@ const fruits = [
   "kiwi",
 ];
 
-const count = {};
+// const count = {};
 
-fruits.forEach((fruit) => {
-  count[fruit] = (count[fruit] || 0) + 1;
+// fruits.forEach((fruit) => {
+//   count[fruit] = (count[fruit] || 0) + 1;
+// });
+
+// console.log(count); //{kiwi: 3, apple: 2, orange: 3}
+
+// 2. Створити масив, якій містить тільки унікальні значення ["kiwi", "apple","orange"]
+const result = [];
+
+fruits.filter((fruit, index, array) => {
+  if (array.indexOf(fruit) === index) {
+    result.push(fruit);
+  }
 });
 
-console.log(count);
+console.log(result);
