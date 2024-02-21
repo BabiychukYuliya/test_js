@@ -8,4 +8,4 @@ const fibbonacci = (num) => {
   return fibbonacci(num - 1) + fibbonacci(num - 2);
 };
 
-console.log(fibbonacci(13)); // 55 ([8] = 21 + [9] = 34)
+console.log(fibbonacci(10)); // 55 ([8] = 21 + [9] = 34)
