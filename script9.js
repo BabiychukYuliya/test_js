@@ -4,7 +4,7 @@ const counterVowels = (str) => {
   let counter = 0;
   const vowels = ["a", "i", "u", "o", "e"];
   for (let char of str) {
-    if (vowels.includes(char)) {
+    if (vowels.includes(char.toLowerCase())) {
       counter += 1;
     }
   }
