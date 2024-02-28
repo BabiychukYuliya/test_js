@@ -13,14 +13,28 @@ function rotate(source) {
   const result = source[0].map((_) => []);
   for (let i = 0; i < source.length; i += 1) {
     for (let j = 0; j < source.length; j += 1) {
-      const value = source[i][j];
-      result[j][source.length - 1 - i] = value;
+      result[j][source.length - 1 - i] = source[i][j];
     }
   }
   return result;
 }
 
 function print(array) {
-  array.forEach((el) => console.log(el));
+  array.forEach((el) => console.log(el)); // функція, яка гарно виводить матрицю
 }
+
+// написати функцію, яка повертає матрицю на 180 градусів
+function rotate180(source) {
+  return rotate(rotate(source));
+}
+
+// написати функцію, яка повертає матрицю на 270 градусів
+function rotate270(source) {
+  return rotate180(rotate(source));
+}
+
 print(rotate(matrix));
+console.log("_____________________________");
+print(rotate180(matrix));
+console.log("_____________________________");
+print(rotate270(matrix));
